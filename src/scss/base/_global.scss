@@ -1,0 +1,119 @@
+html,
+body {
+    height: 100%;
+}
+
+body {
+    color: $mainColor;
+    line-height: 1;
+    font-family: $fontFamily;
+    font-size: $fontSize;
+}
+
+._lock {
+    overflow: hidden;
+    touch-action: none;
+}
+
+.wrapper {
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+}
+
+.main {
+    flex: 1 0 auto;
+}
+
+.footer {
+    flex: 0 0 auto;
+}
+
+@if ($responsiveType==1) {
+
+    // Отзывчивая
+    [class*="__container"] {
+        @if ($maxWidthContainer>0) {
+            max-width: rem($maxWidthContainer);
+            box-sizing: content-box;
+            margin: 0 auto;
+        }
+
+        @if ($containerPadding>0) {
+            padding: 0 rem(math.div($containerPadding, 2));
+        }
+    }
+}
+
+@else {
+
+    // По брейк-поинтам
+    [class*="__container"] {
+        margin: 0 auto;
+
+        @if ($maxWidthContainer>0) {
+            max-width: rem($maxWidthContainer);
+            box-sizing: content-box;
+        }
+
+        @else {
+            @if ($containerPadding>0) {
+                padding: 0 rem(math.div($containerPadding, 2));
+            }
+        }
+
+        @media (max-width: $pc) {
+            max-width: rem(970);
+        }
+
+        @media (max-width: $tablet) {
+            max-width: rem(750);
+        }
+
+        @media (max-width: $mobile) {
+            max-width: none;
+
+            @if ($containerPadding>0 and $maxWidthContainer>0) {
+                padding: 0 rem(math.div($containerPadding, 2));
+            }
+        }
+    }
+}
+
+.title {
+    font-weight: 800;
+    @include adaptiveValue("font-size", 36, 32);
+    line-height: 110%;
+    color: #2C2C2C;
+    margin-bottom: 20px;
+}
+
+.box-wrapper {
+    margin-top: 30px;
+    padding: 30px 30px 30px 30px;
+    @include adaptiveValue("padding", 30, 10);
+    border: 5px solid transparent;
+    border-image: linear-gradient(90deg,#FFC766, #FF5B85);
+    border-image-slice: 1;
+}
+
+.box-text {
+    font-weight: 800;
+    font-size: 24px;
+    @include adaptiveValue("font-size", 24, 15);
+    line-height: 160%;
+    color: #FF8A50;
+}
+
+.content-wrapper {
+    background: #FFFFFF;
+    box-shadow: 0px 4px 15px rgba(189, 189, 189, 0.04);
+    border-radius: 12px;
+    padding: 20px 20px 30px;
+}
+
+input:-webkit-autofill {
+    transition: all 5000s ease-in-out;
+}

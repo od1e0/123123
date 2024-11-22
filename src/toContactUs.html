@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+@@include('html/head.html', {
+"title":"Контакты"
+})
+
+<body>
+    <div class="wrapper">
+        @@include('html/header.html',{})
+        <main class="main">
+            <section class="pages-nav">
+                <div class="pages-nav__container">
+                    <ul class="pages__list">
+                        <li class="pages__item">
+                            <a href="index.html" class="pages__link">Главная</a>
+                        </li>
+                        <li class="pages__item">Контакты</li>
+                    </ul>
+                </div>
+            </section>
+            <section class="to-contact-us">
+                <div class="to-contact-us__container">
+                    <div class="to-contact-us__inner">
+                        <h1 class="title">
+                            Связаться с нами
+                        </h1>
+                        <div class="to-contact-us__content contact-content">
+                            <ul class="contact__list">
+                                <li class="contact__item _icon-clock">
+                                    <span class="contact__span">Работаем круглосуточно и без выходных</span>
+                                </li>
+                                <li class="contact__item _icon-location">
+                                    <span class="contact__span">г.Пинск, ул.Куликова д.30, кв.26</span>
+                                </li>
+                                <li class="contact__item _icon-phone">
+                                    <div class="contact__group">
+                                        <a href="tel:+375291514890" class="contact__link">+375291514890</a>
+                                        <a href="tel:+375447107275" class="contact__link">+375447107275</a>
+                                    </div>
+                                </li>
+                                <li class="contact__item _icon-mail">
+                                    <a href="mailto:rentalpinsk@mail.ru" class="contact__link">rentalpinsk@mail.ru</a>
+                                </li>
+                            </ul>
+                            @@include('html/map.html',{})
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        @@include('html/footer.html',{})
+
+    <script src="js/script.min.js"></script>
+    </div>
+</body>
+
+</html>

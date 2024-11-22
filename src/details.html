@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ru">
+  @@include('html/head.html', { "title":"Детали" })
+
+  <body>
+    @@include('html/header.html', {})
+    <main>
+      <section class="product-details">
+        <div class="product-details__image">
+          <img
+            id="productImage"
+            src="images/default.jpg"
+            alt="Изображение товара"
+          />
+        </div>
+        <div class="product-details__info">
+          <h1 id="productTitle">Название услуги</h1>
+          <div id="productFullDescription">
+            <h2>Описание:</h2>
+            <p id="productDescription"></p>
+          </div>
+          <div id="productRentalDetails">
+            <h2>Стоимость:</h2>
+            <ul id="productPricing"></ul>
+          </div>
+          <div id="productComponentsBlock">
+            <h2>Комплект:</h2>
+            <p id="productComponents"></p>
+          </div>
+          <!-- <div id="productTermsBlock">
+            <h2>Доставка:</h2>
+            <ul id="productTerms1">
+                <li>Доступна БЕСПЛАТНАЯ доставка по городу Пинску </li>
+                <li>Так же доступен самовывоз по адресу - г.Пинск, ул.Куликова д.30, кв26</li>
+            </ul>
+          </div> -->
+          <div id="productTermsBlock">
+            <h2>Условия проката:</h2>
+            <ul id="productTerms"></ul>
+          </div>
+        </div>
+      </section>
+    </main>
+    @@include('html/footer.html', {})
+    <script src="js/script.min.js"></script>
+  </body>
+</html>
