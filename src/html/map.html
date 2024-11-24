@@ -4,7 +4,7 @@
         ymaps.ready(init);
         function init(){
             var myMap = new ymaps.Map("map", {
-                center: [52.118192, 26.118813],
+                center: [52.112191, 26.064798],
                 zoom: 18
             });
             myMap.controls.remove('zoomControl');  
@@ -18,7 +18,7 @@
             var myGeoObject = new ymaps.GeoObject({
             geometry: {
                 type: "Point",
-                coordinates: [52.118192, 26.118813]
+                coordinates: [52.112191, 26.064798]
             }
             });
             myMap.geoObjects.add(myGeoObject);
